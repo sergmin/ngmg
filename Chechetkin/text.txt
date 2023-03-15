@@ -2,3 +2,6 @@ texttexttext
 
 новая строка
 sdsd
+
+
+Conflict
