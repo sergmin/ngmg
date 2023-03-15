@@ -1,7 +1,11 @@
-texttexttext
+п»їtexttexttext
 
-новая строка
+РЅРѕРІР°СЏ СЃС‚СЂРѕРєР°
 sdsd
 
 
-Conflict
+Conflict resolved
+
+A few more lines
+asdasd
+asd
