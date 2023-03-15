@@ -1,3 +1,7 @@
 empty file
 2
-
+<<<<<<< HEAD
+asdfsd
+=======
+3443543
+>>>>>>> 4c9850aeaf91be534e8cd04d74a80c4b0755c794
