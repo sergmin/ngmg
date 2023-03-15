@@ -1,6 +1,7 @@
 r:
-cd R:\Чечёткин Владислав\git\ngmg\Chechetkin
+cd R:\Chechetkin\git\ngmg\Chechetkin
 git add .
 git commit
-cd R:\Чечёткин Владислав\git\ngmg\
+cd R:\Chechetkin\git\ngmg\
 git pull
+pause
