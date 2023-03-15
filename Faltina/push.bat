@@ -1,3 +1,3 @@
 R:
-cd \Фальтина\github\ngmg\Faltina
+cd \Faltina\github\ngmg\Faltina
 git push
