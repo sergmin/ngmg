@@ -1,8 +1,2 @@
-<<<<<<< HEAD
-﻿ekimov loh
-=======
-empty file
-2
-фыва
-фываывфа
->>>>>>> 70ed2a4b27d1ac3222120a9688c879cfd666e3a7
+﻿
+﻿ekimov lo
