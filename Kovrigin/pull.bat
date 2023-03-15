@@ -1,4 +1,4 @@
 R:
 cd /Kovrigin/Git/ngmg/Kovrigin
-git fetch
+git pull
 pause
