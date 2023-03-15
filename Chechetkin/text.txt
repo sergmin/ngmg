@@ -1,5 +1,11 @@
-texttexttext
+﻿texttexttext
 
-����� ������
-asdasdasd
-sd
+новая строка
+sdsd
+
+
+Conflict resolved
+
+A few more lines
+asdasd
+asd

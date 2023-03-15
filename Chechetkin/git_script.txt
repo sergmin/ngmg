@@ -1,0 +1,6 @@
+r:
+cd R:\Чечёткин Владислав\git\ngmg\
+git pull
+cd R:\Чечёткин Владислав\git\ngmg\Chechetkin
+git add .
+git 
