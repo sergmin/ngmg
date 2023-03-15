@@ -1,9 +1,7 @@
-texttexttext
 
-новая строка
-sdsd
+clear
 
-
-A few more lines
-asdasd
-asd
+k
+k
+k
+k
