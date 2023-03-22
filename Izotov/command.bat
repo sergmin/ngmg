@@ -12,5 +12,6 @@ set name=tag_Izotov_v%id%
 echo %name%
 git tag -a %name% -m "Izotov tag"
 
+git push origin %name%
 git push origin %main%
 pause
