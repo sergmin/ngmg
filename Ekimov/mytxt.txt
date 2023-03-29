@@ -1,11 +1,7 @@
-﻿New txt file
+﻿New txt file_123
 sdfsdfsd
 Yes
-<<<<<<< HEAD
-I amRS
-=======
-I amQ
->>>>>>> 498564aa4c9243105baf1f3464d507db6edd61d7
+I amRS_213312
 
 asdassssssss
 
