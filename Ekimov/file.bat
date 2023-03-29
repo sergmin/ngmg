@@ -8,6 +8,6 @@ git merge
 git commit -m "New bat file"
 git tag -a Ekimov_tag -m "Ekimov bat"
 
-git push origin
+git push origin --tags
 git push
 pause
