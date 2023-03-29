@@ -1,4 +1,4 @@
-r:
+R:
 cd /Ïîòàïîâ Àğò¸ì\GIT\ngmg\Potapov
 git add .
 git commit
@@ -6,14 +6,13 @@ git pull
 
 git add .
 git merge
-
-set /P Tg = "Tag: "
-echo %Tg%
-set /P TgD = "Tag description: "
-echo %TgD%
-git tag -a -f %Tg% -m "%TgD%"
+set /P My_Tag="My_Tag: "
+echo %My_Tag%
+set /P Komment="Komment_for_tag: "
+echo %Komment%
+git tag -a -f %My_Tag% -m "%Komment%"
 
 git commit
 git push origin --tags
 git push
-pause>nul
+pause
