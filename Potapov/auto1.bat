@@ -1,14 +1,11 @@
 r:
 cd /Потапов Артём\GIT\ngmg\Potapov
-
 git add .
-set /p comm = "Write comment: "
-git commit -m "%Comm%"
-
+git commit
 git pull
+
 git add .
 git merge
-
 
 set /p Tg = "Tag: "
 echo %Tg%
