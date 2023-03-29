@@ -2,9 +2,5 @@ New txt file
 sdfsdfsd
 Yes
 I am
-dsssdfsdfsdfsadasd
-<<<<<<< HEAD
-theadsfsdfsdf
-=======
-thea
->>>>>>> 5ddd7043b284c05a319dd63774a958cc50ae7952
+
+asda
