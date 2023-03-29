@@ -1,11 +1,2 @@
-<<<<<<< HEAD
-﻿
-﻿ekimov lo
-=======
-
-empty file
-2
-фыва
-фываывфа
-
->>>>>>> ffc89eefd45a5f76623c93ef1f2e0ff172427ae5
+﻿new text123
+new line
