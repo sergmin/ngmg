@@ -1,11 +1,4 @@
-﻿qweqwNew txt file
-sdfsdfsd
+﻿New txt file
 Yes
-I amRS
-
-asdassssssss
-
-<<<<<<< HEAD
-=======
-qe
->>>>>>> fb86df7f2e926a787f187accea15b04d8c4c1448
+I am
+Answel
