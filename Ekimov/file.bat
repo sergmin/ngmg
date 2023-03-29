@@ -1,7 +1,7 @@
 R:
 cd \Ekimov\git\ngmg\Ekimov
 git add .
-git commit
+git commit -m "%comment%"
 git pull
 
 git merge
