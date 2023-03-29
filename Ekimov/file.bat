@@ -1,7 +1,7 @@
 R:
 cd \Ekimov\git\ngmg\Ekimov
 git add .
-git commit -m "Commit with bat"
+git commit
 git pull
 
 git merge
