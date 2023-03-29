@@ -7,12 +7,13 @@ git pull
 git add .
 git merge
 
-set /p Tg = "Tag: "
+set /P Tg = "Tag: "
 echo %Tg%
-set /p TgD = "Tag description: "
+set /P TgD = "Tag description: "
 echo %TgD%
 git tag -a -f %Tg% -m "%TgD%"
 
+git commit
 git push origin --tags
 git push
 pause>nul
