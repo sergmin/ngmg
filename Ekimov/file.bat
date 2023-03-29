@@ -1,12 +1,11 @@
 R:
 cd \Ekimov\git\ngmg\Ekimov
 git add .
-git commit 
+git commit
 git pull
 
 git add .
 git merge
-
 set /P My_Tag="My_Tag: "
 echo %My_Tag%
 set /P Komment="Komment_for_tag: "
