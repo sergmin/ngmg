@@ -1,16 +1,5 @@
-
-clear
-
-chchchchchch
-asdasd
-asdasdas
-=======
-k LLSLSL
-k
-k
-k
-++=++=+===
-
-LOCAL 
-CHANGES
+Changes
 123
+13
+12
+312
