@@ -1,4 +1,4 @@
-@REM @echo off
+@echo off
 
 set /p commit_message="Enter message commit: "
 
