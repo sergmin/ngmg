@@ -8,6 +8,7 @@ for /f "delims=" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort'
     set "last_tag=%%a"
     set /a tag_number=!last_tag:~-1!
 )
+echo %tag_number%
 set /a tag_number2= tag_number +1
 echo %tag_number2%
 git add .
