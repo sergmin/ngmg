@@ -12,7 +12,7 @@ for /f "delims=" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort 
 :break
 git add .
 git commit -m "%commit_message%"
-if %tag_number%==0 (
+if !last_tag! == "" (
     git tag -a turkin_tag_0 -m "Description tag"
 ) else (
     git tag -a turkin_tag_%tag_number% -m "Description tag"
