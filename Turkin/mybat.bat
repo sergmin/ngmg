@@ -9,6 +9,7 @@ for /f "delims=" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort'
     set /a tag_number=!last_tag:~-1!
 )
 set /a tag_number+=1
+echo %tag_number%
 git add .
 git commit -m "%commit_message%"
 git tag -a turkin_tag_%tag_number% -m "Description tag"
