@@ -7,6 +7,7 @@ set /a tag_number=0
 for /f "delims=" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort') do (
     set "last_tag=%%a"
 	echo %last_tag%
+	echo "negr"
     set /a tag_number=!last_tag:~-1!+1
     echo %tag_number%
 	goto :break
