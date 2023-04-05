@@ -1,3 +1,5 @@
+@echo off
+
 set /p commit_message="Enter message commit: "
 
 setlocal EnableDelayedExpansion
@@ -11,6 +13,7 @@ for /f "delims=" %%a in ('git tag ^| sort /r') do (
 git add .
 git commit -m "%commit_message%"
 git tag -a v1.%tag_number% -m "Description tag"
+git pull origin main
 git push origin main --tags
 
 echo "Change success."
