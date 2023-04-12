@@ -1,7 +1,2 @@
-empty file
-2
-фыва
-aфывафываsdfsd
-=======
-3443543
-asdfasdfфыва
+﻿new text123
+new line
