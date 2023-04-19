@@ -8,9 +8,9 @@ set /p tagId=<A_tag_id.txt
 set /a id=%tagId%+1
 echo %id% > A_tag_id.txt
 echo %id% 
-set name=A_tag_id_v%id%
+set name=Akulina_tag_v%id%
 echo %name%
-git tag -a %name% -m "Izotov tag"
+git tag -a %name% -m "Akulina tag"
 
 git push origin %name%
 git push origin %main%
