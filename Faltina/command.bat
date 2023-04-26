@@ -1,7 +1,7 @@
 R:
 cd \Faltina\github\ngmg\Faltina
 git add .
-git commit
+git commit -m "Commit with bat"
 git pull
 
 git add .
@@ -13,7 +13,7 @@ set /P Comment="CommentTag: "
 echo %Comment%
 git tag -a -f %Tag% -m "%Comment%"
 
-git commit
+git commit -m "Commit with bat"
 git push origin --tags
 git push
 pause
