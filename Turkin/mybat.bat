@@ -11,7 +11,7 @@ goto :break
 )
 
 echo %tag_number%
-set /a tag_number2=tag_number+1
+set /a tag_number2=tag_number+2
 echo %tag_number2%
 git add .
 git commit -m "%commit_message%"
