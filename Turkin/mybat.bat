@@ -1,30 +1,32 @@
 @echo off
 
-set /p commit_message="Enter commit message: "
+:: Выводим текущее состояние тегов
+echo Список существующих тегов:
+git tag -l "turkin_tag_*"
 
-setlocal EnableDelayedExpansion
+:: Добавляем изменения
+git add .
 
-set "last_tag=turkin_tag_"
-set "last_tag_number=0"
+:: Запрашиваем сообщение для коммита
+set /p commit_message=Введите сообщение для коммита:
 
-for /f "tokens=2 delims=_" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort /r') do (
-    set "last_tag=%%a"
-    set /a "last_tag_number=%%a"
-    goto :break
+:: Создаем новый коммит
+git commit -m "%commit_message%"
+
+:: Определяем номер нового тега
+set "tag_num=0"
+:check_tag
+if exist .git\refs\tags\turkin_tag_%tag_num% (
+    set /a "tag_num+=1"
+    goto check_tag
 )
 
-set /a "new_tag_number=last_tag_number+1"
-set "new_tag=turkin_tag_%new_tag_number%"
-
+:: Создаем новый тег
+set "new_tag=turkin_tag_%tag_num%"
+git tag %new_tag%
 echo New tag: %new_tag%
 
-git add .
-git commit -m "%commit_message%"
-git tag -a %new_tag% -m "Description tag"
-git pull origin main
-git push origin main --tags
+:: Отправляем изменения на удаленный репозиторий
+git push origin main
 
-echo "Change success."
-pause
-
-:break
+echo Change success.
