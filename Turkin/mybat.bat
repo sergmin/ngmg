@@ -3,7 +3,7 @@
 set /p commit_message="Enter commit message: "
 
 setlocal EnableDelayedExpansion
-set /a tag_number=0
+@REM set /a tag_number=0
 for /f "tokens=2 delims=" %%a in ('git tag ^| findstr /r /c:"turkin_tag[0-9]*$" ^| sort /r') do (
 set "last_tag=%%a"
 set /a tag_number=%last_tag:~-1%
