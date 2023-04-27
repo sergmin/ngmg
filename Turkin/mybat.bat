@@ -9,15 +9,11 @@ set "last_tag_number=0"
 
 for /f "tokens=2 delims=_" %%a in ('git tag ^| findstr /r /c:"turkin_tag_[0-9]*$" ^| sort /r') do (
     set "last_tag=%%a"
-    set "last_tag_number=%%a"
+    set /a "last_tag_number=%%a+1"
     goto :break
 )
 
-echo Last tag: %last_tag%
-
-set /a tag_number=last_tag_number+1
-if %tag_number%==1 set "new_tag=turkin_tag_!tag_number!"
-if %tag_number% gtr 1 set "new_tag=turkin_tag_%tag_number%"
+set "new_tag=turkin_tag_%last_tag_number%"
 
 echo New tag: %new_tag%
 
