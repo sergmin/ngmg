@@ -10,7 +10,7 @@ set /a tag_number=!last_tag:~-1!+1
 goto :break
 )
 
-echo %tag_number%
+@REM echo %tag_number%
 set /a tag_number2=%tag_number%+1
 echo %tag_number2%
 git add .
