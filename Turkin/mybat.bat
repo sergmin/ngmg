@@ -24,7 +24,7 @@ git tag turkin_tag%new_tag%
 git add -A
 
 :: создаём коммит
-git commit -m "Добавлен тег turkin_tag%new_tag%"
+git commit -m "Added tag turkin_tag%new_tag%"
 
 :: отправляем изменения на удалённый сервер в ветку main
 git push origin main
