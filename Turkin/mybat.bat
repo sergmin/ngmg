@@ -31,4 +31,5 @@ git push origin main
 
 :: выводим сообщение
 echo "New tag added"
+echo "Creating new tag: turkin_tag%new_tag%"
 pause
