@@ -4,11 +4,12 @@ setlocal enabledelayedexpansion
 set prefix=turkin_tag_
 set /a max_tag_number=-1
 
-for /f "tokens=2 delims=_" %%i in ('git tag -l "turkin_tag_*"') do (
-    set "current_tag_number=%%~ni"
-    set /a "current_tag_number=!current_tag_number: =!"
-    if "!current_tag_number!" equ "" set /a "current_tag_number=0"
-    if !current_tag_number! gtr !max_tag_number! set /a "max_tag_number=!current_tag_number!"
+for /f "tokens=1,2 delims=_" %%i in ('git tag -l "turkin_tag_*"') do (
+    if "%%j" neq "" (
+        set "current_tag_number=%%j"
+        set /a "current_tag_number=!current_tag_number: =!"
+        if !current_tag_number! gtr !max_tag_number! set /a "max_tag_number=!current_tag_number!"
+    )
 )
 
 set /a next_tag_number=max_tag_number+1
