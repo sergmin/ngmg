@@ -1,29 +1,32 @@
 @echo off
-setlocal enabledelayedexpansion
 
-set prefix=turkin_tag_
-set /a max_tag_number=-1
-
-echo Searching for existing tags...
-
-for /f "tokens=1,2 delims=_" %%i in ('git tag -l "turkin_tag_*"') do (
-    if "%%j" neq "" (
-        set "current_tag_number=%%j"
-        set /a "current_tag_number=!current_tag_number: =!"
-        if !current_tag_number! gtr !max_tag_number! set /a "max_tag_number=!current_tag_number!"
-    )
+:: находим все существующие теги turkin_tag*
+for /f "delims=" %%f in ('dir /b turkin_tag*') do (
+  :: извлекаем номер тега
+  set tag=%%~nf
+  set tag=!tag:turkin_tag=!
+  :: проверяем, является ли тег числом
+  setlocal enabledelayedexpansion
+  if !tag! neq !tag:nonumber=!
+  (
+    :: находим максимальный номер тега
+    if not defined max_tag set max_tag=!tag!
+    if !tag! gtr !max_tag! set max_tag=!tag!
+  )
+  endlocal
 )
 
-set /a next_tag_number=max_tag_number+1
-set next_tag=%prefix%!next_tag_number!
+:: создаём новый тег с номером max_tag+1
+set /a new_tag=max_tag+1
+git tag turkin_tag%new_tag%
 
-echo Creating new tag %next_tag%...
+:: добавляем все изменения в индекс
+git add -A
 
-git add .
-git commit -m "Auto-commit before creating new tag"
-git tag %next_tag%
-echo Created tag %next_tag%
-git push --tags
+:: создаём коммит
+git commit -m "Добавлен тег turkin_tag%new_tag%"
 
-echo Script execution complete. Press any key to exit.
-pause >nul
+:: отправляем изменения на удалённый сервер в ветку main
+git push origin main
+
+:: выводим сообщ
