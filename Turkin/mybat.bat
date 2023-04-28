@@ -18,3 +18,4 @@ git add .
 git commit -m "%commit_message%"
 git tag -a %next_tag% -m "Description tag"
 git push origin main --tags
+
