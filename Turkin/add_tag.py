@@ -1,4 +1,5 @@
 import subprocess
+import re
 
 # Обновляем информацию о тегах в локальном репозитории
 subprocess.check_call(['git', 'fetch', '--tags'])
