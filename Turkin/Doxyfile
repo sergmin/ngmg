@@ -1,0 +1,8 @@
+# Название проекта
+PROJECT_NAME = "NGMG"
+
+# Путь к исходным файлам кода
+INPUT = /Turkin
+
+# Путь к каталогу, в котором будет создана документация
+OUTPUT_DIRECTORY = /Turkin/docs
