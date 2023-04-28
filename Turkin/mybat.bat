@@ -30,3 +30,4 @@ git commit -m "Добавлен тег turkin_tag%new_tag%"
 git push origin main
 
 :: выводим сообщ
+pause
