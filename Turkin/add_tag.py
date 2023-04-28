@@ -22,3 +22,4 @@ subprocess.check_call(['git', 'tag', new_tag])
 
 # Отправляем тег в удаленный репозиторий
 subprocess.check_call(['git', 'push', '--tags'])
+
