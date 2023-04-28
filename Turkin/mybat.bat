@@ -1,35 +1,17 @@
 @echo off
 
-:: находим все существующие теги turkin_tag*
-set max_tag=0
-for /f "delims=" %%f in ('git tag -l "turkin_tag*"') do (
-  :: извлекаем номер тега
-  set tag=%%~nf
-  set tag=!tag:turkin_tag=!
-  :: проверяем, является ли тег числом
-  setlocal enabledelayedexpansion
-  if !tag! neq !tag:nonumber=!
-  (
-    :: находим максимальный номер тега
-    if !tag! gtr !max_tag! set max_tag=!tag!
-  )
-  endlocal
-)
+setlocal
 
-:: создаём новый тег с номером max_tag+1
-set /a new_tag=max_tag+1
-git tag turkin_tag%new_tag%
+set /p commit_message="Enter commit message: "
 
-:: добавляем все изменения в индекс
-git add -A
+git add .
 
-:: создаём коммит
-git commit -m "Added new tag"
+git commit -m "%commit_message%"
 
-:: отправляем изменения на удалённый сервер в ветку main
 git push origin main
 
-:: выводим сообщение
-echo "New tag added"
-echo "Creating new tag: turkin_tag%new_tag%"
+echo "Creating new tag: turkin_tag2"
+
+python add_tag.py
+
 pause
