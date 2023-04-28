@@ -1,5 +1,8 @@
 import subprocess
 
+# Обновляем информацию о тегах в локальном репозитории
+subprocess.check_call(['git', 'fetch', '--tags'])
+
 # Получаем список существующих тегов
 tags = subprocess.check_output(['git', 'tag']).decode().split()
 
