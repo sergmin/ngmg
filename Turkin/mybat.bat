@@ -27,4 +27,3 @@ git push --tags
 
 echo Script execution complete. Press any key to exit.
 pause >nul
-
