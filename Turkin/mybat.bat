@@ -1,21 +1,19 @@
 @echo off
+setlocal enabledelayedexpansion
 
-set /p commit_message="Enter commit message: "
+set prefix=turkin_tag_
+set /a max_tag_number=-1
 
-for /f "tokens=2 delims=_" %%i in ('git tag -l "turkin_tag_*" ^| sort /r /n') do (
-    set /a next_tag=%%i+1
-    goto :done
+for /f "tokens=2 delims=_" %%i in ('git tag -l "turkin_tag_*"') do (
+    set /a current_tag_number=%%i
+    if !current_tag_number! gtr !max_tag_number! set /a max_tag_number=!current_tag_number!
 )
 
-set next_tag=1
-
-:done
-set next_tag=turkin_tag_%next_tag%
-
-echo %next_tag%
+set /a next_tag_number=max_tag_number+1
+set next_tag=%prefix%!next_tag_number!
 
 git add .
-git commit -m "%commit_message%"
-git tag -a %next_tag% -m "Description tag"
-git push origin main --tags
-
+git commit -m "Auto-commit before creating new tag"
+git tag %next_tag%
+echo Created tag %next_tag%
+git push --tags
