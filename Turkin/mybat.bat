@@ -10,8 +10,6 @@ git commit -m "%commit_message%"
 
 git push origin main
 
-echo "Creating new tag: turkin_tag2"
-
 python add_tag.py
 
 pause
