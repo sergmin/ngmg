@@ -1,6 +1,7 @@
 @echo off
 
 :: находим все существующие теги turkin_tag*
+set max_tag=0
 for /f "delims=" %%f in ('dir /b turkin_tag*') do (
   :: извлекаем номер тега
   set tag=%%~nf
@@ -10,7 +11,6 @@ for /f "delims=" %%f in ('dir /b turkin_tag*') do (
   if !tag! neq !tag:nonumber=!
   (
     :: находим максимальный номер тега
-    if not defined max_tag set max_tag=!tag!
     if !tag! gtr !max_tag! set max_tag=!tag!
   )
   endlocal
@@ -29,5 +29,5 @@ git commit -m "Added tag turkin_tag%new_tag%"
 :: отправляем изменения на удалённый сервер в ветку main
 git push origin main
 
-:: выводим сообщ
+:: выводим сообщение
 pause
