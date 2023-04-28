@@ -8,7 +8,7 @@ tags = subprocess.check_output(['git', 'tag']).decode().split()
 
 # Ищем последний тег вида "turkin_tag*"
 # last_tag = max((t for t in tags if t.startswith('turkin_tag_')), default='turkin_tag_0')
-turkin_tags = [t for t in tags if t.startswith('turkin_tag_')]
+turkin_tags = [t for t in tags if t.startswith('turkin_tag')]
 last_tag = sorted(turkin_tags)[-1] if turkin_tags else 'turkin_tag_0'
 
 # Получаем номер последнего тега
