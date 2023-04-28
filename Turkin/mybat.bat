@@ -5,7 +5,9 @@ set prefix=turkin_tag_
 set /a max_tag_number=-1
 
 for /f "tokens=2 delims=_" %%i in ('git tag -l "turkin_tag_*"') do (
-    set /a current_tag_number=%%i
+    set current_tag_number=%%i
+    set current_tag_number=!current_tag_number: =!
+    if "!current_tag_number!" equ "" set current_tag_number=0
     if !current_tag_number! gtr !max_tag_number! set /a max_tag_number=!current_tag_number!
 )
 
