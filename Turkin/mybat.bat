@@ -12,5 +12,4 @@ git push origin main
 
 python add_tag.py
 
-git push --tags
 pause
