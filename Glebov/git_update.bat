@@ -1,7 +1,4 @@
-@echo off
-
 set /p commit_message="Enter commit message: "
-
 setlocal EnableDelayedExpansion
 set /a tag_number=0
 for /f "delims=" %%a in ('git tag ^| findstr /r /c:"Glebov_tag_[0-9]*$" ^| sort') do (
