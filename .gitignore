@@ -1,0 +1,8 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/Sources/ngmg/.vs/ngmg/v17
+/Sources/ngmg/ngmg/x64/Debug
+/Sources/ngmg/x64/Debug
+/Sources/ngmg/ngmgLibrary/x64/Debug
