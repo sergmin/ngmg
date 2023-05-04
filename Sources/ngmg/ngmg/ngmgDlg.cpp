@@ -8,8 +8,8 @@
 #include "ngmgDlg.h"
 #include "afxdialogex.h"
 
-#include <iostream>
-#include "..\ngmgLibrary\ngmgLibrary.h"
+#include <iostream>						// ТЕСТ СТАТИЧНОЙ БИБЛИОТЕКИ // ТЕСТ ДИНАМИЧНОЙ БИБЛИОТЕКИ
+#include "..\ngmgLibrary\ngmgLibrary.h" // ТЕСТ СТАТИЧНОЙ БИБЛИОТЕКИ
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -103,9 +103,21 @@ BOOL CngmgDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Крупный значок
 	SetIcon(m_hIcon, FALSE);		// Мелкий значок
 
-	int a = 5;
-	int b = 6;
-	int c = Sum(a,b);
+	// ТЕСТ СТАТИЧНОЙ БИБЛИОТЕКИ
+	int a = 5;				
+	int b = 6;				
+	int c = Sum(a,b);		
+
+	// ТЕСТ ДИНАМИЧНОЙ БИБЛИОТЕКИ
+	HINSTANCE load;
+	load = LoadLibrary(L"ngmgDynamicLibrary.dll");
+	typedef int (*sum)(int, int);
+	sum Sum2;
+	Sum2 = (sum)GetProcAddress(load, "Sum");
+	int a2 = 10;				
+	int b2 = 22;			
+	int c2 = Sum2(a2, b2);
+	FreeLibrary(load);
 
 	/*
 	// TODO: добавьте дополнительную инициализацию
