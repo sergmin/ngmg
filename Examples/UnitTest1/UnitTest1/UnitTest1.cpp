@@ -1,9 +1,16 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "ngmgDynamicLibrary.h"
-#include "ngmgDynamicLibrary.cpp"
+#include "C:\Black\Git\ngmg\Sources\ngmg\ngmgDynamicLibrary\ngmgDynamicLibrary.h"
+#include "C:\Black\Git\ngmg\Sources\ngmg\ngmg\pch.h"
+#include "C:\Black\Git\ngmg\Sources\ngmg\ngmgDynamicLibrary\ngmgDynamicLibrary.cpp"
+
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+int main()
+{
+	return 0;
+}
 
 namespace UnitTest1
 {
