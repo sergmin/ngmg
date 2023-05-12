@@ -1,0 +1,3 @@
+﻿     Создается библиотека C:\Black\Git\ngmg\Examples\UnitTest1\Release\ngmgDynamicLibrary.lib и объект C:\Black\Git\ngmg\Examples\UnitTest1\Release\ngmgDynamicLibrary.exp
+MSVCRT.lib(exe_main.obj) : error LNK2001: неразрешенный внешний символ _main.
+C:\Black\Git\ngmg\Examples\UnitTest1\Release\ngmgDynamicLibrary.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
