@@ -186,14 +186,25 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CEditableListCtrl.h" />
+    <ClInclude Include="CMessageViewDlg.h" />
+    <ClInclude Include="CTabConnect.h" />
+    <ClInclude Include="CTabMessageView.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="MyCStatic.h" />
     <ClInclude Include="ngmg.h" />
     <ClInclude Include="ngmgDlg.h" />
+    <ClInclude Include="NGMG_MESSAGE_STRUCT.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CEditableListCtrl.cpp" />
+    <ClCompile Include="CMessageViewDlg.cpp" />
+    <ClCompile Include="CTabConnect.cpp" />
+    <ClCompile Include="CTabMessageView.cpp" />
+    <ClCompile Include="MyCStatic.cpp" />
     <ClCompile Include="ngmg.cpp" />
     <ClCompile Include="ngmgDlg.cpp" />
     <ClCompile Include="pch.cpp">
