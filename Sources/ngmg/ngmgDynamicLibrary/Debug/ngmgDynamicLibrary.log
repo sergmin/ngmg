@@ -1,3 +1,0 @@
-﻿     Создается библиотека C:\Black\Git\ngmg\Examples\UnitTest1\Debug\ngmgDynamicLibrary.lib и объект C:\Black\Git\ngmg\Examples\UnitTest1\Debug\ngmgDynamicLibrary.exp
-MSVCRTD.lib(exe_main.obj) : error LNK2019: ссылка на неразрешенный внешний символ _main в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ).
-C:\Black\Git\ngmg\Examples\UnitTest1\Debug\ngmgDynamicLibrary.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

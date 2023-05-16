@@ -1,2 +1,0 @@
-﻿ngmgDlg.obj : error LNK2019: ссылка на неразрешенный внешний символ "int __cdecl Sum(int,int)" (?Sum@@YAHHH@Z) в функции "protected: virtual int __thiscall CngmgDlg::OnInitDialog(void)" (?OnInitDialog@CngmgDlg@@MAEHXZ).
-C:\Black\Git\ngmg\Examples\UnitTest1\Debug\ngmg.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
